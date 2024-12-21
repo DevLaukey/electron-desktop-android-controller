@@ -1,11 +1,16 @@
-const InputHandler = require("./input/input-handler");
-const QueueManager = require("./queue/queue-manager");
-const { notifications } = require("./utils/notifications");
-const ConnectionManager = require("./webrtc/connection-manager");
+const { showNotification } = window.electronAPI;
 
+// ES module imports instead of require
+import { InputHandler } from "./input/input-handler.js";
+import { QueueManager } from "./queue/queue-manager.js";
+import { ConnectionManager } from "./webrtc/connection-manager.js";
+
+// Global variables
 let connectionManager;
 let inputHandler;
 let queueManager;
+let sessionTimer;
+let sessionEndTime;
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("🚀 Starting application initialization...");

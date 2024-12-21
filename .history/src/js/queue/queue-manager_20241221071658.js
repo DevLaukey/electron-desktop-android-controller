@@ -70,3 +70,4 @@ export class QueueManager {
     );
   }
 }
+modules.exports = QueueManager;

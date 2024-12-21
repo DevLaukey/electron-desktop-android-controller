@@ -2,7 +2,7 @@
   "name": "android-remote-controller",
   "version": "1.0.0",
   "description": "Windows controller for remote Android devices",
-  "main": "main.cjs",
+  "main": "main.js",
   "scripts": {
     "dev": "set NODE_ENV=development && electron .",
     "start": "electron .",

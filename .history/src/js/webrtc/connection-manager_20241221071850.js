@@ -1,6 +1,7 @@
-const io = require("socket.io-client");
+import io from "socket.io-client";
 
-class ConnectionManager {
+
+export class ConnectionManager {
   constructor(serverUrl) {
     this.socket = io(serverUrl, {
       reconnection: true,
@@ -131,4 +132,3 @@ class ConnectionManager {
   }
 }
 
-export default ConnectionManager;

@@ -1,4 +1,4 @@
-export class InputHandler {
+class InputHandler {
   constructor(socket) {
     this.socket = socket;
     this.isControlling = false;
@@ -86,3 +86,5 @@ export class InputHandler {
     };
   }
 }
+
+modules.exports = InputHandler;
