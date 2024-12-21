@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Android Remote Controller</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../node_modules/toastify-js/src/toastify.css">
+        <script type="text/javascript" src="../node_modules/toastify-js/src/toastify.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with queue and controls -->
+        <div class="sidebar">
+            <div class="queue-section">
+                <h2>Device Queue</h2>
+                <div id="queue-list"></div>
+            </div>
+            <div class="controls-section">
+                <h2>Controls</h2>
+                <button id="connect-btn" class="primary-btn">Connect to Device</button>
+                <button id="disconnect-btn" class="secondary-btn">Disconnect</button>
+                <div class="session-info">
+                    <p>Session Time: <span id="session-time">00:00</span></p>
+                    <p>Device ID: <span id="device-id">-</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <div class="device-screen">
+                <video id="remote-screen" autoplay></video>
+            </div>
+            <div class="control-panel">
+                <!-- Control buttons will be added here -->
+            </div>
+        </div>
+    </div>
+    <script src="js/renderer.js"></script>
+
+</body>
+</html>
